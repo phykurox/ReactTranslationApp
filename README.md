@@ -9,6 +9,7 @@
 - [Dependencies](#-dependencies)
 
 <h2 align="center">How To Use</h2>
+
 ![alt text](img/mygif.gif)
 
 <h2 align="center">Dependencies</h2>
