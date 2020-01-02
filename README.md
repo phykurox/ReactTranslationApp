@@ -1,4 +1,5 @@
 <h1 align="center">React Native Translation App</h1>
+
 **Note that I've only tested on _Android_**
 
 
