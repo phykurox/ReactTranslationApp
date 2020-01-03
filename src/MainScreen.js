@@ -7,7 +7,7 @@ import { PowerTranslator, ProviderTypes, TranslatorConfiguration, TranslatorFact
 import Tts from 'react-native-tts';
 import _ from 'lodash'; 
 
-
+''
 
 const { AZURE_KEY } = getEnvVars();
 
@@ -125,6 +125,7 @@ class MainScreen extends Component {
           return { id: v.id, name: v.name, language: v.language };
         });
       const listAllLang = _.mapValues(_.groupBy(availableVoices, 'language'))
+      console.log(listAllLang);
       const listLang = listAllLang[`${this.state.translateLang}`]
       let selectedVoice = null;
       if (listLang && listLang.length > 0) {
@@ -176,12 +177,22 @@ class MainScreen extends Component {
             <View style={styles.toprow}>
               <View style={styles.row}>
                 <Picker style={styles.button} selectedValue = {this.state.top} onValueChange = {this.updateLang}>
+                  <Picker.Item label = "German" value = "de-DE" />
                   <Picker.Item label = "English" value = "en-US" />
-                  <Picker.Item label = "Chinese Simplified" value = "zh_CN" />
+                  <Picker.Item label = "Chinese Simplified" value = "zh-CN" />
+                  <Picker.Item label = "French" value = "fr-FR" />
+                  <Picker.Item label = "Italian" value = "it-IT" />
+                  <Picker.Item label = "Spanish" value = "es-ES" />
+                  <Picker.Item label = "Russian" value = "ru-RU" />
                   <Picker.Item label = "Japanese" value = "ja-JP" />
                   <Picker.Item label = "Thai" value = "th-TH" />
                   <Picker.Item label = "Korean" value = "ko-KR" />
-                  <Picker.Item label = "Malay" value = "ms-MY" />
+                  <Picker.Item label = "Tagalog" value = "fil-PH" />
+                  <Picker.Item label = "Bahasa Melayu" value = "ms-MY" />
+                  <Picker.Item label = "Bahasa Indonesia" value = "id-ID" />
+                  <Picker.Item label = "Hindi" value = "hi-IN" />
+                  <Picker.Item label = "Tamil" value = "ta-IN" />
+                  <Picker.Item label = "Vietnamese" value = "vi-VN" />
                 </Picker>
               </View>
               <View style={styles.row}>
@@ -206,11 +217,22 @@ class MainScreen extends Component {
                 <View style={styles.row}>
                   <Text>Translate to: </Text>
                   <Picker style={styles.button} selectedValue = {this.state.translateLang} onValueChange = {this.updateLangtwo}>
+                    <Picker.Item label = "German" value = "de-DE" />
                     <Picker.Item label = "English" value = "en-US" />
                     <Picker.Item label = "Chinese Simplified" value = "zh-CN" />
+                    <Picker.Item label = "French" value = "fr-FR" />
+                    <Picker.Item label = "Italian" value = "it-IT" />
+                    <Picker.Item label = "Spanish" value = "es-ES" />
+                    <Picker.Item label = "Russian" value = "ru-RU" />
                     <Picker.Item label = "Japanese" value = "ja-JP" />
                     <Picker.Item label = "Thai" value = "th-TH" />
                     <Picker.Item label = "Korean" value = "ko-KR" />
+                    <Picker.Item label = "Tagalog" value = "fil-PH" />
+                    <Picker.Item label = "Bahasa Melayu" value = "ms-MY" />
+                    <Picker.Item label = "Bahasa Indonesia" value = "id-ID" />
+                    <Picker.Item label = "Hindi" value = "hi-IN" />
+                    <Picker.Item label = "Tamil" value = "ta-IN" />
+                    <Picker.Item label = "Vietnamese" value = "vi-VN" />
                   </Picker>
                 </View>
                 <View style={styles.row}>
