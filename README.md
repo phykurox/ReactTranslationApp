@@ -1,5 +1,8 @@
 <h1 align="center">React Native Translation App</h1>
+
 **Note that I've only tested on _Android_**
+
+<a href="https://youtu.be/4lf0u60kEcY">Video Documentation</a></p>
 
 
 ## Contents
@@ -8,6 +11,7 @@
 - [Dependencies](#-dependencies)
 
 <h2 align="center">How To Use</h2>
+
 ![alt text](img/mygif.gif)
 
 <h2 align="center">Dependencies</h2>
